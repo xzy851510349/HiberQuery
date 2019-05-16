@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+ <hibernate-mapping>
+ 	<class name="com.hqyj.Bean.Provice" table="provice">
+ 		<id name="id" column="id">
+ 			<generator class="native"></generator>
+ 		</id>
+ 		<set name="city">
+ 			<key column="f_p_id"></key>
+ 			<one-to-many class="com.hqyj.Bean.City"/>
+ 		</set>
+ 		<property name="name" ></property>
+ 	</class>
+ </hibernate-mapping>  
